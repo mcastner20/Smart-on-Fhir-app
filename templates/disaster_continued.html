@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Emergency Prepardeness</title>
+{% endblock %}
+
+{% block body %}
+<br>
+
+<h1>Emergency Prepardeness</h1>
+<hr style="border: 4px solid#5b9aa0;" />
+<form action="/hazard_probability" method="POST">
+
+    <h3>For the previous questions that you answered yes to, please answer the following questions:</h3>
+    <h5>1. How many years ago did this occur?</h5>
+    <h5>2. [Redacted]</h5>
+    <h5>3. Did the disaster affect your current place of residence?</h5>
+    <hr style="border: 1px solid#d9d9d9;" />
+    {%for question in questions%}
+
+    <h5>{{question}}</h5>
+
+    <h6 for="{{new_range[loop.index0]}}">How many years ago did this occur?</h6>
+    <input type="number" id="{{new_range[loop.index0]}}" name="{{new_range[loop.index0]}}" min="0" max="100">
+    <br>
+    <h6>[Redacted]</h6>
+    <input type="radio" name="{{new_range[loop.index0]}}a" value="[Redacted]1">[Redacted]<BR>
+    <input type="radio" name="{{new_range[loop.index0]}}a" value="[Redacted]2">[Redacted]<BR>
+    <br>
+    <h6>Did the disaster affect your current place of residence?</h6>
+    <input type="radio" name="{{new_range[loop.index0]}}b" value="Yes">Yes<BR>
+    <input type="radio" name="{{new_range[loop.index0]}}b" value="No">No<BR>
+    <hr style="border: 1px solid#d9d9d9;" />
+
+
+    {%endfor%}
+
+
+    <input type='submit' value='Next'>
+</form>
+
+{% endblock%}

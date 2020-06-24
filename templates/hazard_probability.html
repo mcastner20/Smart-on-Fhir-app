@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Emergency Prepardeness</title>
+{% endblock %}
+
+{% block body %}
+<h1>Emergency Prepardeness</h1>
+<hr style="border: 4px solid#5b9aa0;" />
+<form action="/hazard_continued" method="POST">
+
+    <h3>[Redacted]</h3>
+    <h5>1. [Redacted]</h5>
+    <h5>2. [Redacted]</h5>
+    <h5>3. [Redacted]</h5>
+    <h5>4. [Redacted]</h5>
+    <h5>5. [Redacted]</h5>
+	<table class="responsive-table-input-matrix">
+			<thead>
+			<tr>
+				<th></th>
+				<th>[Redacted]</th>
+				<th>[Redacted]</th>
+				<th>[Redacted]</th>
+				<th>[Redacted]</th>
+				<th>[Redacted]</th>
+			</tr>
+			</thead>
+			<tbody>
+			{%for question in questions_list %}
+			<tr>
+				<td>{{question}}</td>
+				<td><input type="radio"></td>
+				<td><input type="radio"></td>
+				<td><input type="radio"></td>
+				<td><input type="radio"></td>
+				<td><input type="radio"></td>
+			</tr>
+			{%endfor%}
+			</tbody>
+		</table>
+	<input type='submit' value='Results'>
+	<br>
+	<br>
+	</form>
+<br>
+
+
+
+{% endblock%}

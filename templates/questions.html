@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Enter Your Information</title>
+<style>
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<body bgcolor="#666699">
+<br>
+
+<h1>{{first_name}} {{last_name}}</h1>
+<hr style="border: 4px solid#5b9aa0;" />
+<form action="/disaster" method="POST">
+    <label for="condition">Conditions:</label>
+    <input class="form-control" type="text" name='condition' id='condition' placeholder="Enter Your Conditions" aria-label="Enter Answer" value ="{%for condition in conditions%}{{condition}}, {% endfor %}">
+    <hr style="border: 1px solid#d9d9d9;" />
+    <label for="medications">Medications:</label>
+    <input class="form-control" type="text" name='medications' id='medications' placeholder="Enter Your Medications" aria-label="Enter Last Name" value ="{%for medication in medications%}{{medication}}, {% endfor %}" >
+    <hr style="border: 1px solid#d9d9d9;" />
+    <label for="immunizations">Imunizations:</label>
+    <input  type="text" name='immunizations' id='immunizations' class="form-control" placeholder="Enter Your Immunizations" aria-label="Enter Last Name" value ="{%for immunization in immunizations%}{{immunization}}, {% endfor %}"  >
+    <hr style="border: 1px solid#d9d9d9;" />
+    <label for="allergies">Allergies:</label>
+    <input  type="text" name='allergies' id='allergies' class="form-control" placeholder="Enter Your Immunizations" aria-label="Enter Last Name" value ="{%for allergy in allergies%}{{allergy}}, {% endfor %}"  >
+    <hr style="border: 1px solid#d9d9d9;" />
+    <P>Medications:</P>
+    <textarea name = 'medications'>{%for medication in medications%}{{medication}}, {% endfor %} </textarea>
+    <br>
+    <input type='submit' value='Next'>
+</form>
+</body>
+{% endblock%}

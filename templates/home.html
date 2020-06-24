@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Enter Your Information</title>
+{% endblock %}
+
+{% block body %}
+<br>
+
+<h1>Enter Your Information</h1>
+<hr style="border: 4px solid#5b9aa0;" />
+<form action="/questions" method="POST">
+    <label for="first_name">First Name:</label>
+    <input class="form-control" type="text" name='first_name' id='first_name' placeholder="Enter First Name" aria-label="Enter Answer">
+    <br>
+    <label for="last_name">Last Name:</label>
+    <input class="form-control" type="text" name='last_name' id='last_name' placeholder="Enter Last Name" aria-label="Enter Last Name">
+    <br>
+    <label for="dob">Date of Birth:</label>
+    <input  type="date" name='dob' id='dob' class="form-control" >
+    <br>
+
+
+    <input type='submit' value='Next'>
+</form>
+<br>
+
+{% endblock%}

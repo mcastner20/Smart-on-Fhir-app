@@ -1,0 +1,212 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Emergency Prepardeness</title>
+{% endblock %}
+
+{% block body %}
+<br>
+
+<h1>Emergency Prepardeness</h1>
+<hr style="border: 4px solid#5b9aa0;" />
+<form action="/demographic" method="POST">
+    <h6>How well prepared do you fell your household is to handle a large-scale disaster or emergency? Would you say...</h6>
+    <input type="radio" name="0" value="1">Well prepared<BR>
+    <input type="radio" name="0" value="2">Somewhat prepared<BR>
+    <input type="radio" name=0 value="3">Not preapred at all<BR>
+    <input type="radio" name="0" value="77">Don't know/Not sure<BR>
+
+    <br>
+    <h5>For the following set of questions please click "yes" if you have completed the folllowing tasks at your home or have the supply.
+    If your answer is no please indicate the reason for "no" was one of the following:</h5>
+    <p>1. I do not feel the need to complete the task</p>
+    <p>2. I would like to complete the task but not sure of exactly what to do</p>
+    <p>3. I know what I need to do; I am just finding it hard to complete the task</p>
+    <p>4. I have completed the task at one time, but I have not maintained/updated this task </p>
+    <hr style="border: 1px solid#d9d9d9;" />
+    <h6>Does your household have a packaged first aid kit? first aid supplies easily packaged into a go bag?</h6>
+    <input type="radio" name="1" value="1a">Yes<BR>
+    <input type="radio" name="1" value="1b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="1" value="1c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="1" value="1d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="1" value="1e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Does your household have stored candles/matches?</h6>
+    <input type="radio" name="2" value="2a">Yes<BR>
+    <input type="radio" name="2" value="2b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="2" value="2c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="2" value="2d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="2" value="2e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Extra batteries for flashlight and radio(check "yes" if both radio and flashlight do not require batteries)</h6>
+    <input type="radio" name="3" value="3a">Yes<BR>
+    <input type="radio" name="3" value="3b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="3" value="3c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="3" value="3d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="3" value="3e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Battery-powered, 2 way radios?</h6>
+    <input type="radio" name="4" value="4a">Yes<BR>
+    <input type="radio" name="4" value="4b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="4" value="4c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="4" value="4d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="4" value="4e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>If you have a cell phone, do you have a way to charge the cell phone's battery if the power is out(extra battery or charger)</h6>
+    <input type="radio" name="5" value="5a">Yes<BR>
+    <input type="radio" name="5" value="5b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="5" value="5c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="5" value="5d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="5" value="5e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Does your household have a working battery-operated radio and working batteries for you to use if the electricity is out?</h6>
+    <input type="radio" name="6" value="6a">Yes<BR>
+    <input type="radio" name="6" value="6b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="6" value="6c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="6" value="6d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="6" value="6e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Does your household have copies of important documents in a safe location(e.g. water proof container)? OR Are important documents store electronically elsewhere (backed up on an electronic storage cloud or photos on an external storage site)?</h6>
+    <input type="radio" name="7" value="7a">Yes<BR>
+    <input type="radio" name="7" value="7b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="7" value="7c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="7" value="7d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="7" value="7e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Does your household have a fire extinguisher?</h6>
+    <input type="radio" name="8" value="8a">Yes<BR>
+    <input type="radio" name="8" value="8b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="8" value="8c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="8" value="8d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="8" value="8e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Does your household have an emergency communication plan such as a list of numbers designated out-of-town contacts that has been reviewed for accuracy in the last year?</h6>
+    <input type="radio" name="9" value="9a">Yes<BR>
+    <input type="radio" name="9" value="9b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="9" value="9c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="9" value="9d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="9" value="9e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Do you have cash stored at home you can use in an emergency?</h6>
+    <input type="radio" name="10" value="10a">Yes<BR>
+    <input type="radio" name="10" value="10b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="10" value="10c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="10" value="10d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="10" value="10e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Do you have an evacuation plan to get out of your home if there is an emergency</h6>
+    <input type="radio" name="11" value="11a">Yes<BR>
+    <input type="radio" name="11" value="11b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="11" value="11c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="11" value="11d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="11" value="11e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Have you signed up for an alert system to receive emergency announcements?</h6>
+    <input type="radio" name="12" value="12a">Yes<BR>
+    <input type="radio" name="12" value="12b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="12" value="12c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="12" value="12d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="12" value="12e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Can you shut off your utilities (gas, water, electricity) to the house in case of an emergency?</h6>
+    <input type="radio" name="13" value="13a">Yes<BR>
+    <input type="radio" name="13" value="13b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="13" value="13c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="13" value="13d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="13" value="13e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Are you registered with any kind of an agency to check on you in case of a large scale emergency (e.g. SMART911, code Red, or your local county registry, power company if dependent on electricity for medical equipment, public health CERT or home heath agency, special neighborhood watch, faith community group)?</h6>
+    <input type="radio" name="14" value="14a">Yes<BR>
+    <input type="radio" name="14" value="14b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="14" value="14c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="14" value="14d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="14" value="14e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Multi-purpose tool (several tools that fold up into a pocket-sized unit)</h6>
+    <input type="radio" name="15" value="15a">Yes<BR>
+    <input type="radio" name="15" value="15b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="15" value="15c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="15" value="15d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="15" value="15e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Sanitation and personal hygiene items (toilet paper, plastic garbage bags) in a rapidly accessible pack?</h6>
+    <input type="radio" name="16" value="16a">Yes<BR>
+    <input type="radio" name="16" value="16b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="16" value="16c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="16" value="16d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="16" value="16e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Emergency blanket rapidly accessible if you need to leave the home?</h6>
+    <input type="radio" name="17" value="17a">Yes<BR>
+    <input type="radio" name="17" value="17b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="17" value="17c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="17" value="17d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="17" value="17e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Whistle (to attract attention of emergency personnel)?</h6>
+    <input type="radio" name="18" value="18a">Yes<BR>
+    <input type="radio" name="18" value="18b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="18" value="18c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="18" value="18d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="18" value="18e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>One change of clothing and shoes packed or stored separately in a ready-to-go bag</h6>
+    <input type="radio" name="19" value="19a">Yes<BR>
+    <input type="radio" name="19" value="19b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="19" value="19c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="19" value="19d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="19" value="19e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Filtering face mask</h6>
+    <input type="radio" name="20" value="20a">Yes<BR>
+    <input type="radio" name="20" value="20b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="20" value="20c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="20" value="20d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="20" value="20e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Monitors local broadcasts</h6>
+    <input type="radio" name="21" value="21a">Yes<BR>
+    <input type="radio" name="21" value="21b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="21" value="21c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="21" value="21d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="21" value="21e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Generator owners: Demonstrates operating only out-of-doors in a well-ventilated area. Refuels generator only after it has cooled. Does not connect generator to home's electrical system except though an approved transfer switch</h6>
+    <input type="radio" name="22" value="22a">Yes<BR>
+    <input type="radio" name="22" value="22b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="22" value="22c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="22" value="22d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="22" value="22e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Ability to lock home in an emergency</h6>
+    <input type="radio" name="23" value="23a">Yes<BR>
+    <input type="radio" name="23" value="23b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="23" value="23c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="23" value="23d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="23" value="23e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>Evacuation route with alternative route that avoids driving through flooded roads and downed power lines.</h6>
+    <input type="radio" name="24" value="24a">Yes<BR>
+    <input type="radio" name="24" value="24b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="24" value="24c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="24" value="24d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="24" value="24e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <h6>In an emergency, if your household was asked to evacuate, what would your household do with your pet(s)</h6>
+    <input type="radio" name="25" value="25a">take it/tem with you<BR>
+    <input type="radio" name="25" value="25b">find a safe place for it/them<BR>
+    <input type="radio" name="25" value="25c">leave behind with food and water<BR>
+    <input type="radio" name="25" value="25d">would not evacuate because of pets<BR>
+    <input type="radio" name="25" value="25e">no pets don't know/unsure refused<BR>
+
+    <br>
+    <h6>financial scam role-play don't know what to ask</h6>
+    <input type="radio" name="26" value="26a">Yes<BR>
+    <input type="radio" name="26" value="26b">No, I do not feel the need to complete the task<BR>
+    <input type="radio" name="26" value="26c">No, I would like to complete the task but not sure of exactly what to do<BR>
+    <input type="radio" name="26" value="26d">No, I know what I need to do; I am just finding it hard to complete the task<BR>
+    <input type="radio" name="26" value="26e">No, I have completed the task at one time, but I have not maintained/updated this task<BR>
+    <br>
+    <input type='submit' value='Next'>
+</form>
+
+{% endblock%}

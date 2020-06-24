@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Demographic Information</title>
+{% endblock %}
+
+{% block body %}
+
+<br>
+
+<h1>Demographic Information</h1>
+<hr style="border: 4px solid#5b9aa0;" />
+<form action="/hazard" method="POST">
+    <h6>Have you ever served in the US military?</h6>
+    <input type="radio" name="27" value="27a">Yes, Active Duty<BR>
+    <input type="radio" name="27" value="27b">Yes, Reserve or National Guard<BR>
+    <input type="radio" name="27" value="27c">Yes, both<BR>
+    <input type="radio" name="27" value="27d">No<BR>
+    <br>
+    <h6>Have members of your household ever served in the US military?</h6>
+    <input type="radio" name="27" value="27a">Yes, Active Duty<BR>
+    <input type="radio" name="27" value="27b">Yes, Reserve or National Guard<BR>
+    <input type="radio" name="27" value="27c">Yes, both<BR>
+    <input type="radio" name="27" value="27d">No<BR>
+    <br>
+    <h6>What race do you identify with (check all that apply)?</h6>
+    <input type="checkbox" id="28a" name="28a" value="28a">
+    <label for="28a">American Indian/Alaskan Native</label><br>
+    <input type="checkbox" id="28b" name="28b" value="28b">
+    <label for="28b">Asian</label><br>
+    <input type="checkbox" id="28c" name="28c" value="28c">
+    <label for="28c">Black or african American</label><br>
+    <input type="checkbox" id="28d" name="28d" value="28d">
+    <label for="28d">White/Caucasian</label><br>
+    <input type="checkbox" id="28e" name="28e" value="28e">
+    <label for="28e">Native Hawaiian or other Pacific Islander</label><br>
+    <input type="checkbox" id="28f" name="28f" value="28f">
+    <label for="28f">Don't Know/Unsure </label><br>
+    <br>
+    <h6>What race do members of your household identify with (check all that apply)?</h6>
+    <input type="checkbox" id="29a" name="29a" value="29a">
+    <label for="29a">American Indian/Alaskan Native</label><br>
+    <input type="checkbox" id="29b" name="29b" value="29b">
+    <label for="29b">Asian</label><br>
+    <input type="checkbox" id="29c" name="29c" value="29c">
+    <label for="29c">Black or african American</label><br>
+    <input type="checkbox" id="29d" name="29d" value="29d">
+    <label for="29d">White/Caucasian</label><br>
+    <input type="checkbox" id="29e" name="29e" value="29e">
+    <label for="29e">Native Hawaiian or other Pacific Islander</label><br>
+    <input type="checkbox" id="29f" name="29f" value="29f">
+    <label for="29f">Don't Know/Unsure </label><br>
+    <br>
+    <h6>What is the highest level of education you have completed? Choose the best answer:</h6>
+    <input type="radio" name="30" value="30a">Less than high school completion/diploma<BR>
+    <input type="radio" name="30" value="30b">High school degree/GED/or equivalent<BR>
+    <input type="radio" name="30" value="30c">Some college, no degree<BR>
+    <input type="radio" name="30" value="30d">Associate's degree<BR>
+    <input type="radio" name="30" value="30e">Bachelor's degree<BR>
+    <input type="radio" name="30" value="30f">Master's doctorate, or professional degree<BR>
+    <br>
+    <h6>How often in the past 12 months would you say your household was worried or stressed about having enough money to buy nutritious meals?</h6>
+    <input type="radio" name="31" value="31a">Always<BR>
+    <input type="radio" name="31" value="31b">Usually<BR>
+    <input type="radio" name="31" value="31c">Sometimes<BR>
+    <input type="radio" name="31" value="31d">Rarely<BR>
+    <input type="radio" name="31" value="31e">Never<BR>
+    <input type="radio" name="31" value="31f">Don't know/unsure<BR>
+    <br>
+    <h6>How often in the past 12 months would you say your household was worried or stressed about having enough money to pay your rent/mortgage (or housing expenses like property taxes if your mortgage is paid)?</h6>
+    <input type="radio" name="32" value="32a">Always<BR>
+    <input type="radio" name="32" value="32b">Usually<BR>
+    <input type="radio" name="32" value="32c">Sometimes<BR>
+    <input type="radio" name="32" value="32d">Rarely<BR>
+    <input type="radio" name="32" value="32e">Never<BR>
+    <input type="radio" name="32" value="32f">Don't know/unsure<BR>
+    <br>
+    <h6>Do you or anyone in your household have any of the following (check all that apply)?</h6>
+    <input type="checkbox" id="33a" name="33a" value="33a">
+    <label for="33a">Impaired hearing</label><br>
+    <input type="checkbox" id="33b" name="33b" value="33b">
+    <label for="33b">Impaired vision</label><br>
+    <input type="checkbox" id="33c" name="33c" value="33c">
+    <label for="33c">Developmental/cognitive disability</label><br>
+    <input type="checkbox" id="33d" name="33d" value="33d">
+    <label for="33d">Difficulty understanding English</label><br>
+    <input type="checkbox" id="33e" name="33e" value="33e">
+    <label for="33e">Difficulty understanding written material</label><br>
+    <input type="checkbox" id="33f" name="33f" value="33f">
+    <label for="33f">None of the above</label><br>
+    <input type="checkbox" id="33g" name="33g" value="33g">
+    <label for="33g">Don't Know/Unsure</label><br>
+    <br>
+     <h6>Do you have a lifeline or special alert system that you wear? OR Do you have an electronic assistant on a device (Siri, Alexa, Cortona, etc.) that will activate first responders or call your emergency contact by voice?</h6>
+    <input type="radio" name="34" value="34a">Yes<BR>
+    <input type="radio" name="34" value="34b">No<BR>
+    <input type="radio" name="34" value="34c">Don't Know/Unsure<BR>
+    <br>
+    <input type='submit' value='Next'>
+</form>
+</body>
+{% endblock%}
